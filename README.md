@@ -110,6 +110,11 @@ AOS.init({
 ```html
 <div class="slower" data-aos="fadeInUp"></div>
 ```
+
+如果想让动画播放完毕停留在第一帧，可加class：backwards
+```html
+<div class="backwards" data-aos="fadeInUp"></div>
+```
 ---
 
 ## 二、插件使用方式（使用aos.css）

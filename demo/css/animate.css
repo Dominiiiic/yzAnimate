@@ -96,6 +96,11 @@
   -webkit-animation-duration: calc(var(--animate-duration) * 3);
   animation-duration: calc(var(--animate-duration) * 3);
 }
+/* 最后一帧 */
+.animated.backwards {
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
 /* 动画减弱模式 */
 /* @media print, (prefers-reduced-motion: reduce) {
   .animated {
