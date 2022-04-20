@@ -66,16 +66,16 @@ yarn dev //运行
 ```
 
 ## js、css地址
-[aos.js](https://dominiiiic.github.io/yzAnimate/dist/aos.js){:target="_blank"}
+[aos.js](https://dominiiiic.github.io/yzAnimate/dist/aos.js)
 
-[aos.css](https://dominiiiic.github.io/yzAnimate/dist/aos.css){:target="_blank"}
+[aos.css](https://dominiiiic.github.io/yzAnimate/dist/aos.css)
 
-[animate.css](https://dominiiiic.github.io/yzAnimate/demo/css/animate.css){:target="_blank"}
+[animate.css](https://dominiiiic.github.io/yzAnimate/demo/css/animate.css)
 
 ## Demo
-[Demo(使用animate.css)](https://dominiiiic.github.io/yzAnimate/demo/){:target="_blank"}
+[Demo(使用animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
 
-[Demo(aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html){:target="_blank"}
+[Demo(aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html)
 
 
 ## 一、插件使用方式（使用animate.css）
