@@ -608,16 +608,13 @@ var init = function init(settings) {
   window.addEventListener('orientationchange', debounce(refresh, options.debounceDelay, true));
 
   // 如果使用动画组件
-  console.log(options.useLibrary);
   if (options.useLibrary && options.useLibrary != "") {
     // 先获取有多少组需要使用的动画
     var libraryArr = options.useLibrary.split(',');
-    console.log(libraryArr);
     // 循环添加动画
     libraryArr.forEach(function (item, index) {
-      console.log(item, index);
       if (item.split('|')[0] && item.split('|')[1]) {
-        var div = document.querySelector(item.split('|')[1]); //id选择器\
+        var div = document.querySelector(item.split('|')[1]);
         div.innerHTML += domList[item.split('|')[0]] ? domList[item.split('|')[0]] : '';
       }
     });

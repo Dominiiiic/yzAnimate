@@ -221,16 +221,13 @@ const init = function init(settings) {
   );
 
   // 如果使用动画组件
-  console.log(options.useLibrary)
   if(options.useLibrary && options.useLibrary !=""){
     // 先获取有多少组需要使用的动画
     const libraryArr = options.useLibrary.split(',')
-    console.log(libraryArr)
     // 循环添加动画
     libraryArr.forEach((item, index) => {
-      console.log(item,index)
       if(item.split('|')[0] && item.split('|')[1]) {
-        let div = document.querySelector(item.split('|')[1]); //id选择器\
+        let div = document.querySelector(item.split('|')[1]);
         div.innerHTML += domList[item.split('|')[0]] ? domList[item.split('|')[0]] : ''
       }
     })
