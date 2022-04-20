@@ -4,16 +4,10 @@
     <meta charset="utf-8">
     <title>AOS - Animate on scroll library</title>
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/animate.css" />
   </head>
   <body>
-    <div class="loading">
-      <div style="--i:0"></div>
-      <div style="--i:1"></div>
-      <div style="--i:2"></div>
-      <div style="--i:3"></div>
-      <div style="--i:4"></div>
-      <p>100%</p>
-    </div>
+    <div class="animateLoading2"><div style="--i:0"></div><div style="--i:1"></div><div style="--i:2"></div><div style="--i:3"></div><div style="--i:4"></div></div>
 
     <style>
         *{
@@ -22,109 +16,7 @@
         }
         body {
           height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           background: #2f3542;
-        }
-        .loading {
-          width: 160px;
-          position: relative;
-        }
-        .loading div {
-          width: 30px;
-          height: 30px;
-          background: #febc20;
-          position: absolute;
-          left: calc(var(--i) * 30px);
-          border: 1px solid;
-          animation: loading 2s linear infinite;
-          animation-delay: calc(var(--i) * -400ms);
-        }
-        .loading p {
-          width: 100%;
-          position: absolute;
-          bottom: -60px;
-          font-size: 16px;
-          text-align: center;
-          color: #fff;
-        }
-
-        @-webkit-keyframes loading {
-          0% {
-            left: 150px;
-            top: 0;
-          }
-          80% {
-            left: 0;
-            top: 0;
-          }
-          85% {
-            left: 0;
-            top: -30px;
-            width: 30px;
-            left: 30px;
-          }
-          88% {
-            left: 0;
-            top: -30px
-          }
-          90% {
-            width: 60px;
-            height: 25px;
-          }
-          95% {
-            left: 150px;
-            top: -30px;
-            width: 30px;
-            height: 30px;
-          }
-          98% {
-            left: 150px;
-            top: -30px;
-          }
-          100% {
-            left: 150px;
-            top: 0;
-          }
-        }
-        @keyframes loading {
-          0% {
-            left: 150px;
-            top: 0;
-          }
-          80% {
-            left: 0;
-            top: 0;
-          }
-          85% {
-            left: 0;
-            top: -30px;
-            width: 30px;
-            left: 30px;
-          }
-          88% {
-            left: 0;
-            top: -30px
-          }
-          90% {
-            width: 60px;
-            height: 25px;
-          }
-          95% {
-            left: 150px;
-            top: -30px;
-            width: 30px;
-            height: 30px;
-          }
-          98% {
-            left: 150px;
-            top: -30px;
-          }
-          100% {
-            left: 150px;
-            top: 0;
-          }
         }
     </style>
     

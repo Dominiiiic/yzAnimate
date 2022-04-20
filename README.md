@@ -65,7 +65,7 @@ yarn build //构建之后会生成dist目录，内有aos.js和aos.css
 yarn dev //运行
 ```
 
-## css、js地址
+## js、css地址
 [aos.js](https://dominiiiic.github.io/yzAnimate/dist/aos.js)
 
 [aos.css](https://dominiiiic.github.io/yzAnimate/dist/aos.css)
@@ -96,6 +96,9 @@ AOS.init({
     offset: 120, // 从原始触发点的偏移量 (px)
     once: false, // 向下滑动时，动画只发生一次
     mirror: true, // 滚动到元素上方时是否应设置动画
+    
+    // 使用现成的配套动画(动画名|插入的dom,动画名|插入的dom,……)
+    useLibrary: '动画名|插入的dom,动画名|插入的dom,动画名|插入的dom,……'  //例如 useLibrary: 'animateLoading1|.loading1'
 });
 ```
 上面的元素将获得两个类：animated和 fadeInUp。使用以上三个设置的不同搭配方式，能够集成任何外部 CSS 动画库。外部库在实际动画之前并不太在意动画状态，因此，若想这些元素在滚动前不可见，需要添加下面这样的样式:

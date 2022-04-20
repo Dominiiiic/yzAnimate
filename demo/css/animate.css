@@ -4078,6 +4078,9 @@
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+
+/* 自定义动画 */
+/* 故障效果（慢） */
 @keyframes faultJitterSlow {
   0% {
     transform: translateX(0);
@@ -4164,6 +4167,7 @@
   -webkit-animation-name: faultJitterSlow;
   animation-name: faultJitterSlow;
 }
+/* 故障效果（快） */
 @keyframes faultJitterFast {
   0% {
     transform: translateX(0);
@@ -4250,6 +4254,7 @@
   -webkit-animation-name: faultJitterFast;
   animation-name: faultJitterFast;
 }
+/* 从左到右惯性 */
 @-webkit-keyframes powerSprintLeft {
   0% {
     -webkit-transform: translateX(-30%);
@@ -4290,6 +4295,7 @@
   -webkit-animation-name: powerSprintLeft;
   animation-name: powerSprintLeft;
 }
+/* 从右到左惯性 */
 @-webkit-keyframes powerSprintRight {
   0% {
     -webkit-transform: translateX(30%);
@@ -4329,4 +4335,169 @@
 .powerSprintRight {
   -webkit-animation-name: powerSprintRight;
   animation-name: powerSprintRight;
+}
+/* loading效果1 */
+.animateLoading1 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.animateLoading1>div {
+  border-width: 5px;
+  border-style: solid;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  animation: animateLoading1 2.5s ease infinite;
+}
+.animateLoading1>div:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  top: 50px;
+  left: 50px;
+  animation-delay: 0s;
+}
+.animateLoading1>div:nth-child(2) {
+  width: 70px;
+  height: 70px;
+  top: 40px;
+  left: 40px;
+  animation-delay: 0.1s;
+}
+.animateLoading1>div:nth-child(3) {
+  width: 90px;
+  height: 90px;
+  top: 30px;
+  left: 30px;
+  animation-delay: 0.2s;
+}
+.animateLoading1>div:nth-child(4) {
+  width: 110px;
+  height: 110px;
+  top: 20px;
+  left: 20px;
+  animation-delay: 0.3s;
+}
+@-webkit-keyframes animateLoading1 {
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+@keyframes loadianimateLoading1ng {
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+/* loading效果2 */
+.animateLoading2 {
+  width: 170px;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.animateLoading2 div {
+  width: 30px;
+  height: 30px;
+  background: #febc20;
+  position: absolute;
+  left: calc(var(--i) * 30px);
+  border: 1px solid;
+  animation: animateLoading2 2s linear infinite;
+  animation-delay: calc(var(--i) * -400ms);
+}
+/* @-webkit-keyframes animateLoading2 {
+  0% {
+    left: 150px;
+    top: 0;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  85% {
+    left: 0;
+    top: -30px;
+    width: 30px;
+    left: 30px;
+  }
+  88% {
+    left: 0;
+    top: -30px
+  }
+  90% {
+    width: 60px;
+    height: 25px;
+  }
+  95% {
+    left: 150px;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+  }
+  98% {
+    left: 150px;
+    top: -30px;
+  }
+  100% {
+    left: 150px;
+    top: 0;
+  }
+} */
+@keyframes animateLoading2 {
+  0% {
+    left: 150px;
+    top: 0;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  85% {
+    left: 0;
+    top: -30px;
+    width: 30px;
+    left: 30px;
+  }
+  88% {
+    left: 0;
+    top: -30px
+  }
+  90% {
+    width: 90px;
+    height: 25px;
+  }
+  95% {
+    left: 150px;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+  }
+  98% {
+    left: 150px;
+    top: -30px;
+  }
+  100% {
+    left: 150px;
+    top: 0;
+  }
 }

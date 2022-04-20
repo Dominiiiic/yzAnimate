@@ -398,16 +398,24 @@ var prepare = function prepare($elements, options) {
 };
 
 /**
- * Generate initial array with elements as objects
- * This array will be extended later with elements attributes values
+ * Generate initial array with elements as objects *以元素作为对象生成初始数组
+ * This array will be extended later with elements attributes values *稍后将使用元素属性值扩展此数组
  * like 'position'
  */
+
 var elements = (function () {
   var elements = document.querySelectorAll('[data-aos]');
   return Array.prototype.map.call(elements, function (node) {
     return { node: node };
   });
 });
+
+/* Clearing variables */
+
+var domList = {
+    'animateLoading1': '<div class="animateLoading1"><div></div><div></div><div></div><div></div></div>',
+    'animateLoading2': '<div class="animateLoading2"><div style="--i:0"></div><div style="--i:1"></div><div style="--i:2"></div><div style="--i:3"></div><div style="--i:4"></div></div>'
+};
 
 /**
  * *******************************************************
@@ -478,7 +486,7 @@ var refresh = function refresh() {
 
 /**
  * Hard refresh
- * create array with new elements and trigger refresh
+ * create array with new elements and trigger refresh 使用新元素创建数组并触发刷新
  */
 var refreshHard = function refreshHard() {
   $aosElements = elements();
@@ -519,16 +527,17 @@ var isDisabled = function isDisabled(optionDisable) {
 };
 
 /**
- * Initializing AOS
- * - Create options merging defaults with user defined options
- * - Set attributes on <body> as global setting - css relies on it
- * - Attach preparing elements to options.startEvent,
- *   window resize and orientation change
- * - Attach function that handle scroll and everything connected to it
- *   to window scroll event and fire once document is ready to set initial state
+ * Initializing AOS *初始化AOS
+ * - Create options merging defaults with user defined options -创建选项将默认值与用户定义的选项合并
+ * - Set attributes on <body> as global setting - css relies on it -将<body>上的属性设置为全局设置-css依赖于此
+ * - Attach preparing elements to options.startEvent, -将准备元素附加到options.StarteEvent，
+ *   window resize and orientation change 窗口大小和方向更改
+ * - Attach function that handle scroll and everything connected to it -附加处理滚动和与之连接的所有内容的功能
+ *   to window scroll event and fire once document is ready to set initial state 在文档准备好设置初始状态后，打开滚动事件并触发
  */
 var init = function init(settings) {
   options = _extends(options, settings);
+  console.log(options);
 
   // Create initial array with elements -> to be fullfilled later with prepare()
   $aosElements = elements();
@@ -594,7 +603,21 @@ var init = function init(settings) {
 
   window.addEventListener('orientationchange', debounce(refresh, options.debounceDelay, true));
 
-  return $aosElements;
+  // 如果使用动画组件
+  console.log(options.useLibrary);
+  if (options.useLibrary && options.useLibrary != "") {
+    // 先获取有多少组需要使用的动画
+    var libraryArr = options.useLibrary.split(',');
+    console.log(libraryArr);
+    // 循环添加动画
+    libraryArr.forEach(function (item, index) {
+      console.log(item, index);
+      if (item.split('|')[0] && item.split('|')[1]) {
+        var div = document.querySelector(item.split('|')[1]); //id选择器\
+        div.innerHTML += domList[item.split('|')[0]] ? domList[item.split('|')[0]] : '';
+      }
+    });
+  }
 };
 
 /**
