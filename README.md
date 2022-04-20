@@ -65,6 +65,16 @@ yarn build //构建之后会生成dist目录，内有aos.js和aos.css
 yarn dev //运行
 ```
 
+## css、js地址
+[aos.js](https://dominiiiic.github.io/yzAnimate/dist/aos.js)
+[aos.css](https://dominiiiic.github.io/yzAnimate/dist/aos.css)
+[animate.css](https://dominiiiic.github.io/yzAnimate/demo/css/animate.css)
+
+## Demo
+[Demo(使用animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
+[Demo(aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html)
+
+
 ## 一、插件使用方式（使用animate.css）
 使用 animatedClassName 改变 AOS 默认行为，将放置在 data-aos 中的 class 类名在页面滚动时生效
 
