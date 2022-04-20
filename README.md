@@ -67,11 +67,14 @@ yarn dev //运行
 
 ## css、js地址
 [aos.js](https://dominiiiic.github.io/yzAnimate/dist/aos.js)
+
 [aos.css](https://dominiiiic.github.io/yzAnimate/dist/aos.css)
+
 [animate.css](https://dominiiiic.github.io/yzAnimate/demo/css/animate.css)
 
 ## Demo
 [Demo(使用animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
+
 [Demo(aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html)
 
 
