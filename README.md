@@ -75,7 +75,7 @@ yarn dev //运行
 ## Demo
 [Demo(使用animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
 
-[Demo(aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html)
+[Demo(使用aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html)
 
 
 ## 一、插件使用方式（使用animate.css）
