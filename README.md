@@ -84,6 +84,12 @@ js会识别class为animateJs的dom元素，并在动画库数组中匹配对应�
 ```html
 <div class="animateJs animateLoading1"></div>
 ```
+随后查看调试工具可发现dom结构会变成：
+```html
+<div class="animateJs animateLoading1">
+  <div class="animateLoading1Dom"><div></div><div></div><div></div><div></div></div>
+</div>
+```
 
 ## 二、插件使用方式（使用animate.css，需要引入aos.js）
 使用 animatedClassName 改变 AOS 默认行为，将放置在 data-aos 中的 class 类名在页面滚动时生效
