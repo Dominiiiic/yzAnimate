@@ -101,7 +101,7 @@ js会识别class为animateJs的dom元素，并在动画库数组中匹配对应�
 <div data-aos="fadeInUp"></div> 
 ```
 
-#### 初始化
+### 初始化
 ```js
 AOS.init({
     useClassNames: true, // 值为 true，将添加滚动 `data-aos` 内容为 class
@@ -122,7 +122,7 @@ AOS.init({
   visibility: visible;
 }
 ```
-#### 额外添加功能性class
+### 额外添加功能性class
 
 如果想让动画无限循环播放，可加class：infinite
 ```html
