@@ -73,7 +73,7 @@ yarn dev //运行
 [animate.css](https://dominiiiic.github.io/yzAnimate/demo/css/animate.css)
 
 ## Demo
-[Demo(使用animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
+[Demo(使用现成的配套动画&animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
 
 [Demo(使用aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html)
 
