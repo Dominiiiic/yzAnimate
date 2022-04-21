@@ -68,9 +68,11 @@ yarn dev //运行
 ## js、css地址
 [aos.js](https://dominiiiic.github.io/yzAnimate/dist/aos.js)
 
-[aos.css](https://dominiiiic.github.io/yzAnimate/dist/aos.css)
-
 [animate.css](https://dominiiiic.github.io/yzAnimate/demo/css/animate.css)
+
+[animate.min.css（压缩）](https://dominiiiic.github.io/yzAnimate/demo/css/animate.min.css)
+
+[aos.css（已压缩）](https://dominiiiic.github.io/yzAnimate/dist/aos.css)
 
 ## Demo
 [Demo(使用现成的配套动画&animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
