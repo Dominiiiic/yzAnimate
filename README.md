@@ -141,7 +141,6 @@ AOS.init({
 ```html
 <div class="backwards" data-aos="fadeInUp"></div>
 ```
----
 
 ## 三、插件使用方式（使用aos.css，需要引入aos.js）
 
