@@ -77,8 +77,14 @@ yarn dev //运行
 
 [Demo(使用aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html)
 
+## 一、使用现成的配套动画（需要引入aos.js和animate.css）
+如果想使用现成的配套动画，需要添加class：animateJs和动画名（如animateLoading1、animateLoading2）
+js会识别有class为animateJs的dom元素，并在动画库数组中匹配对应的动画名称，然后插入对应的动画html结构
+```html
+<div class="animateJs animateLoading1"></div>
+```
 
-## 一、插件使用方式（使用animate.css）
+## 二、插件使用方式（使用animate.css，需要引入aos.js）
 使用 animatedClassName 改变 AOS 默认行为，将放置在 data-aos 中的 class 类名在页面滚动时生效
 
 ```html
@@ -96,9 +102,6 @@ AOS.init({
     offset: 120, // 从原始触发点的偏移量 (px)
     once: false, // 向下滑动时，动画只发生一次
     mirror: true, // 滚动到元素上方时是否应设置动画
-    
-    // 使用现成的配套动画(动画名|插入的dom,动画名|插入的dom,……)
-    useLibrary: '动画名|插入的dom,动画名|插入的dom,动画名|插入的dom,……'  //例如 useLibrary: 'animateLoading1|.loading1'
 });
 ```
 上面的元素将获得两个类：animated和 fadeInUp。使用以上三个设置的不同搭配方式，能够集成任何外部 CSS 动画库。外部库在实际动画之前并不太在意动画状态，因此，若想这些元素在滚动前不可见，需要添加下面这样的样式:
@@ -133,7 +136,7 @@ AOS.init({
 ```
 ---
 
-## 二、插件使用方式（使用aos.css）
+## 三、插件使用方式（使用aos.css，需要引入aos.js）
 
 ### 1. 初始化 AOS:
 

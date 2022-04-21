@@ -220,19 +220,45 @@ const init = function init(settings) {
     debounce(refresh, options.debounceDelay, true)
   );
 
-  // 如果使用动画组件
-  if(options.useLibrary && options.useLibrary !=""){
-    // 先获取有多少组需要使用的动画
-    const libraryArr = options.useLibrary.split(',')
-    // 循环添加动画
-    libraryArr.forEach((item, index) => {
-      if(item.split('|')[0] && item.split('|')[1]) {
-        let div = document.querySelector(item.split('|')[1]);
-        div.innerHTML += domList[item.split('|')[0]] ? domList[item.split('|')[0]] : ''
+  // // 如果使用动画组件
+  // if(options.useLibrary && options.useLibrary !=""){
+  //   // 先获取有多少组需要使用的动画
+  //   const libraryArr = options.useLibrary.split(',')
+  //   // 循环添加动画
+  //   libraryArr.forEach((item, index) => {
+  //     if(item.split('|')[0] && item.split('|')[1]) {
+  //       let div = document.querySelector(item.split('|')[1]);
+  //       div.innerHTML += domList[item.split('|')[0]] ? domList[item.split('|')[0]] : ''
+  //     }
+  //   })
+  // }
+
+  // 获取页面里所有class为animateJs的元素
+  var animateJsList = Array.from(document.getElementsByClassName('animateJs')); // 获取class为animateJs的元素
+
+  // 遍历有class为animateJs的dom
+  if(animateJsList.length > 0){
+    animateJsList.forEach((item, index) => {
+      // 循环现有动画库对象
+      for(var className in domList){
+        // 判断是否有动画库内的class
+        if(hasClass(item,className)){
+          item.innerHTML += domList[className] ? domList[className] : ''
+        }
       }
     })
   }
 
+  // 判断是否有class
+  function hasClass(elem, className){
+    var classes = elem.className.split(/\s+/) ;
+    for(var i= 0 ; i < classes.length ; i ++) {
+      if( classes[i] === className ) {
+        return true ;
+      }
+    }
+    return false ;
+  }
 };
 
 /**

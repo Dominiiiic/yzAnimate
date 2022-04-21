@@ -19,9 +19,9 @@
     <div data-id="powerSprintRight" class="animate-item" data-aos="powerSprintRight">powerSprintRight</div>
     <div data-id="powerSprintLeft" class="animate-item" data-aos="powerSprintLeft">powerSprintLeft</div>
 
-    <h3>js引用动画</h3>
-    <div data-id="" class="animate-item loading1"><p class="animate-tips">loading加载动画：animateLoading1</p></div>
-    <div data-id="" class="animate-item loading2"><p class="animate-tips">loading加载动画：animateLoading2</p></div>
+    <h3>现成的配套动画</h3>
+    <div data-id="" class="animate-item animateJs animateLoading1"><p class="animate-tips">loading加载动画：animateLoading1</p></div>
+    <div data-id="" class="animate-item animateJs animateLoading2"><p class="animate-tips">loading加载动画：animateLoading2</p></div>
 
     <!-- animate提供的动画 -->
     <h3>animate提供的动画</h3>
@@ -243,12 +243,9 @@
 
         // 通过 'data-aos-*' 属性在每个元素上重写配置:
         offset: 120, // 从原始触发点的偏移量 (px)
-        easing: 'ease', // AOS 动画默认 easing
         once: false, // 向下滑动时，动画只发生一次
         mirror: true, // 滚动到元素上方时是否应设置动画
 
-        // 使用现成的配套动画(动画名|插入的dom,动画名|插入的dom……)
-        useLibrary: 'animateLoading1|.loading1,animateLoading2|.loading2'
       });
 
       document.addEventListener('aos:in', function (e) {

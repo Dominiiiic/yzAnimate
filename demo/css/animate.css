@@ -4337,7 +4337,7 @@
   animation-name: powerSprintRight;
 }
 /* loading效果1 */
-.animateLoading1 {
+.animateLoading1Dom {
   width: 150px;
   height: 150px;
   position: absolute;
@@ -4346,7 +4346,7 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.animateLoading1>div {
+.animateLoading1Dom>div {
   border-width: 5px;
   border-style: solid;
   border-left-color: #fff;
@@ -4357,28 +4357,28 @@
   position: absolute;
   animation: animateLoading1 2.5s ease infinite;
 }
-.animateLoading1>div:nth-child(1) {
+.animateLoading1Dom>div:nth-child(1) {
   width: 50px;
   height: 50px;
   top: 50px;
   left: 50px;
   animation-delay: 0s;
 }
-.animateLoading1>div:nth-child(2) {
+.animateLoading1Dom>div:nth-child(2) {
   width: 70px;
   height: 70px;
   top: 40px;
   left: 40px;
   animation-delay: 0.1s;
 }
-.animateLoading1>div:nth-child(3) {
+.animateLoading1Dom>div:nth-child(3) {
   width: 90px;
   height: 90px;
   top: 30px;
   left: 30px;
   animation-delay: 0.2s;
 }
-.animateLoading1>div:nth-child(4) {
+.animateLoading1Dom>div:nth-child(4) {
   width: 110px;
   height: 110px;
   top: 20px;
@@ -4395,7 +4395,7 @@
     transform: rotate(0);
   }
 }
-@keyframes loadianimateLoading1ng {
+@keyframes animateLoading1 {
   50% {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
@@ -4406,7 +4406,7 @@
   }
 }
 /* loading效果2 */
-.animateLoading2 {
+.animateLoading2Dom {
   width: 170px;
   position: relative;
   position: absolute;
@@ -4415,7 +4415,7 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.animateLoading2 div {
+.animateLoading2Dom div {
   width: 30px;
   height: 30px;
   background: #febc20;
@@ -4425,7 +4425,7 @@
   animation: animateLoading2 2s linear infinite;
   animation-delay: calc(var(--i) * -400ms);
 }
-/* @-webkit-keyframes animateLoading2 {
+@-webkit-keyframes animateLoading2 {
   0% {
     left: 150px;
     top: 0;
@@ -4445,7 +4445,7 @@
     top: -30px
   }
   90% {
-    width: 60px;
+    width: 90px;
     height: 25px;
   }
   95% {
@@ -4462,7 +4462,7 @@
     left: 150px;
     top: 0;
   }
-} */
+}
 @keyframes animateLoading2 {
   0% {
     left: 150px;
