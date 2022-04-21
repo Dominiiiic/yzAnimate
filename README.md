@@ -80,7 +80,7 @@ yarn dev //运行
 ## 一、使用现成的配套动画（需要引入aos.js和animate.css）
 如果想使用现成的配套动画，需要添加class：animateJs和动画名（如animateLoading1、animateLoading2）
 
-js会识别有class为animateJs的dom元素，并在动画库数组中匹配对应的动画名称，然后插入对应的动画html结构
+js会识别class为animateJs的dom元素，并在动画库数组中匹配对应的动画名称，然后插入对应的动画html结构
 ```html
 <div class="animateJs animateLoading1"></div>
 ```
