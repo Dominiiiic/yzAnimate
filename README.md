@@ -75,12 +75,12 @@ yarn dev //运行
 [aos.css（已压缩）](https://dominiiiic.github.io/yzAnimate/dist/aos.css)
 
 ## Demo
-[Demo(使用现成的配套动画&animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
+[Demo(使用现成的模板动画&animate.css)](https://dominiiiic.github.io/yzAnimate/demo/)
 
 [Demo(使用aos.css)](https://dominiiiic.github.io/yzAnimate/demo/aos.html)
 
-## 一、使用现成的配套动画（需要引入aos.js和animate.css）
-如果想使用现成的配套动画，需要添加class：animateJs和动画名（如animateLoading1、animateLoading2）
+## 一、使用模板动画（需要引入animate.css和aos.js）
+如果想使用现成的模板动画，需要添加class：animateJs和动画名（如animateLoading1、animateLoading2）
 
 js会识别class为animateJs的dom元素，并在动画库数组中匹配对应的动画名称，然后插入对应的动画html结构，例：
 ```html
@@ -93,7 +93,7 @@ js会识别class为animateJs的dom元素，并在动画库数组中匹配对应�
 </div>
 ```
 
-## 二、插件使用方式（使用animate.css，需要引入aos.js）
+## 二、插件使用方式（需要引入animate.css和aos.js）
 使用 animatedClassName 改变 AOS 默认行为，将放置在 data-aos 中的 class 类名在页面滚动时生效
 
 ```html
