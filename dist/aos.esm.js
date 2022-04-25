@@ -622,34 +622,34 @@ var init = function init(settings) {
   //     }
   //   })
   // }
+};
 
-  // 获取页面里所有class为animateJs的元素
-  var animateJsList = Array.from(document.getElementsByClassName('animateJs')); // 获取class为animateJs的元素
+// 获取页面里所有class为animateJs的元素
+var animateJsList = Array.from(document.getElementsByClassName('animateJs')); // 获取class为animateJs的元素
 
-  // 遍历有class为animateJs的dom
-  if (animateJsList.length > 0) {
-    animateJsList.forEach(function (item, index) {
-      // 循环现有动画库对象
-      for (var className in domList) {
-        // 判断是否有动画库内的class
-        if (hasClass(item, className)) {
-          item.innerHTML += domList[className] ? domList[className] : '';
-        }
-      }
-    });
-  }
-
-  // 判断是否有class
-  function hasClass(elem, className) {
-    var classes = elem.className.split(/\s+/);
-    for (var i = 0; i < classes.length; i++) {
-      if (classes[i] === className) {
-        return true;
+// 遍历有class为animateJs的dom
+if (animateJsList.length > 0) {
+  animateJsList.forEach(function (item, index) {
+    // 循环现有动画库对象
+    for (var className in domList) {
+      // 判断是否有动画库内的class
+      if (hasClass(item, className)) {
+        item.innerHTML += domList[className] ? domList[className] : '';
       }
     }
-    return false;
+  });
+}
+
+// 判断是否有class
+function hasClass(elem, className) {
+  var classes = elem.className.split(/\s+/);
+  for (var i = 0; i < classes.length; i++) {
+    if (classes[i] === className) {
+      return true;
+    }
   }
-};
+  return false;
+}
 
 /**
  * Export Public API
