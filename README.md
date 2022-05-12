@@ -129,9 +129,9 @@ AOS.init({
 <div class="infinite" data-aos="fadeInUp"></div>
 ```
 
-如果想让动画延迟播放，可加class：delay-1s delay-2s delay-3s delay-4s delay-5s 
+如果想让动画延迟播放，可加class：delay-1 delay-2 delay-3 delay-4 delay-5 delay-6 （0.5s的倍数）
 ```html
-<div class="delay-1s" data-aos="fadeInUp"></div>
+<div class="delay-1" data-aos="fadeInUp"></div>
 ```
 
 如果想修改动画播放时长，可加class：faster（0.5s）、fast（0.8s）、slow（2s）、slower（3s）
